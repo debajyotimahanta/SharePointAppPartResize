@@ -1,25 +1,15 @@
-#Lync Presence Awareness 
-This plugin will include presence awareness for a given person field. It works on IE, Chrome and Firefox. In order for this plugin to work. To install this plugin you can use bower
+#SharePoint App Part resizer plugin
+This plugin will resize an app part based on the content in a particualr element. We need to call this when DOM is constrcuted or whenever it changes. It uses SharePoint 2013 resize functionality,which is called by posting the size to the parent.
 ```javascript
-bower install LyncPresencePlugin
+bower install SharePointAppPartResizer
 ```
 
 ### Requirments
-+ You must have Lync client installed.
 + Needs jquery
-+ You will need to include the main.css and images library in the styles folder.
++ Needs some kind of AMD (tested with requirejs)
 
 ### Overview
-The way it works is you need to declare your class in the following name where presence needs to show in the following manner
-```html
-<div class="author" data-user-id="john.doe@xxx.net">John Doe</div>
-```
-1. It loops through all items which has class author
-2. It uses data-user-id attribute value to construct the presence. So this id must be SPID
-At end of the page you will see that i am initializing the object and calling InsertLyncs method which does the above two steps for you
-
+Start by includeing this plugin in your app module. Once its included, all you need to do is, initalize the classand as a constrcuter parameter pass in the id of the DOM element which has the content.
 ```javascript
-var x= new Lync();
-x.InsertLyncs();
+var resizer = new SharePointResizer("contentRow");
 ```
-In order to see a sample setup, please refer to index.html file.

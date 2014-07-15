@@ -1,17 +1,18 @@
 {
-  "name": "Lync Presence Awareness Plugin",
-  "version": "0.9.4",
-  "homepage": "https://github.com/debajyotimahanta/Lync",
+  "name": "SharePoint app part resize",,
+  "version": "0.1.0",
+  "homepage": "https://github.com/SharePointAppPartResize",
   "authors": [
     "dmahanta <debajyoti.mahanta@gmail.com>"
   ],
-  "description": "Plugin to show presence indicator for names via Lycn client/ActiveX",
+  "description": "Plugin to resize SharePoint 2013 app part based on content",
   "main": "dist/scripts/main.js",
   "keywords": [
-    "Lync",
+    "SharePoint",
     "microsoft",
     "IM",
-    "presence"
+    "app",
+    "app part"
   ],
   "license": "MIT",
   "ignore": [
