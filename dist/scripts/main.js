@@ -13,6 +13,9 @@
 
       SharePointAppPartResizer.prototype.init = function(id) {
         var i, param, params;
+        if (document.URL.indexOf('&') <= -1) {
+          return;
+        }
         params = document.URL.split("?")[1].split("&");
         i = 0;
         while (i < params.length) {
