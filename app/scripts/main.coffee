@@ -5,6 +5,8 @@ define ["jquery"], ($) ->
       @init(id)
     @senderId = ""
     init:(id)  ->
+      if document.URL.indexOf('&')<=-1
+        return
       params = document.URL.split("?")[1].split("&")
       i = 0
       while i < params.length
