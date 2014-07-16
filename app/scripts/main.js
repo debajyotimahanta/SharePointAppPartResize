@@ -29,9 +29,10 @@
       };
 
       SharePointAppPartResizer.prototype.adjustSize = function(id) {
-        var height, resizeMessage, width;
+        var contentElement, height, resizeMessage, width;
         width = $("body").width();
-        height = $("#" + id).height() + $("#contentRow").css("padding-top").replace("px", "") * 1 + $("#contentRow").css("padding-bottom").replace("px", "") * 1;
+        contentElement = $("#" + id);
+        height = contentElement.height() + contentElement.css("padding-top").replace("px", "") * 1 + contentElement.css("padding-bottom").replace("px", "") * 1;
         resizeMessage = "<message senderId=" + this.senderId + ">resize(" + width + "," + height + ")</message>";
         window.parent.postMessage(resizeMessage, "*");
       };

@@ -18,7 +18,8 @@ define ["jquery"], ($) ->
 
     adjustSize :(id) ->
       width = $("body").width()
-      height = $("##{id}").height() + $("#contentRow").css("padding-top").replace("px", "") * 1 + $("#contentRow").css("padding-bottom").replace("px", "") * 1
+      contentElement=$("##{id}")
+      height = contentElement.height() + contentElement.css("padding-top").replace("px", "") * 1 + contentElement.css("padding-bottom").replace("px", "") * 1
       resizeMessage = "<message senderId=" + @senderId + ">resize(" + width + "," + height + ")</message>"
       window.parent.postMessage resizeMessage, "*"
       return
