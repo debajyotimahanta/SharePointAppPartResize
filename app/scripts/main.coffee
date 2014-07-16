@@ -20,4 +20,4 @@ define ["jquery"], ($) ->
       resizeMessage = "<message senderId=" + @senderId + ">resize(" + width + "," + height + ")</message>"
       window.parent.postMessage resizeMessage, "*"
       return
-SharePointAppPartResizer
+  SharePointAppPartResizer

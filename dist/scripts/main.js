@@ -2,7 +2,7 @@
 (function() {
   define(["jquery"], function($) {
     var SharePointAppPartResizer;
-    return SharePointAppPartResizer = (function() {
+    SharePointAppPartResizer = (function() {
       function SharePointAppPartResizer() {}
 
       SharePointAppPartResizer = function(id) {
@@ -36,8 +36,7 @@
       return SharePointAppPartResizer;
 
     })();
+    return SharePointAppPartResizer;
   });
-
-  SharePointAppPartResizer;
 
 }).call(this);
